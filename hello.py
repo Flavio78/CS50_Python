@@ -13,6 +13,6 @@ print(f"hello, {first}, {last}")
 
 value1 = (int)(input("Insert 1st value "))
 
-value2 = (int)(input(" Insert 2nd value "))
+value2 = (int)(input("Insert 2nd value "))
 
 print(f"{value1 + value2}")
