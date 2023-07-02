@@ -6,6 +6,7 @@
   },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
   "workbench.editor.enablePreview": false,
   "workbench.list.openMode": "singleClick",
   "editor.fontLigatures": true,
