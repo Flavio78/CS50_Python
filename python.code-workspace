@@ -33,6 +33,7 @@
 		},
 		"[python]": {
 			"editor.renderWhitespace": "all",
+			"editor.defaultFormatter": "ms-python.black-formatter"
 		},
 		"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 		"editor.guides.bracketPairs": true,
