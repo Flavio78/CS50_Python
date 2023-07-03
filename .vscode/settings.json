@@ -33,4 +33,9 @@
   "javascript.autoClosingTags": false,
   "html.autoClosingTags": true,
   "files.trimTrailingWhitespace": true,
+  "python.testing.pytestArgs": [
+    "lecture5"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
 }
