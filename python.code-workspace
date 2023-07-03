@@ -6,7 +6,18 @@
 	],
 	"launch": {
 		"version": "0.2.0",
-		"configurations": []
+		"configurations": [
+			{
+				"name": "Python: Debug with argv",
+				"type": "python",
+				"request": "launch",
+				"program": "${file}",
+				"args": [
+					"David",
+				],
+				"console": "integratedTerminal"
+			}
+		]
 	},
 	"settings": {
 		"editor.codeActionsOnSave": {
@@ -33,7 +44,9 @@
 		},
 		"[python]": {
 			"editor.renderWhitespace": "all",
-			"editor.defaultFormatter": "ms-python.black-formatter"
+			"editor.defaultFormatter": "ms-python.black-formatter",
+			"editor.fontLigatures": false,
+			"debug.console.closeOnEnd": true,
 		},
 		"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 		"editor.guides.bracketPairs": true,
@@ -46,6 +59,5 @@
 		"javascript.autoClosingTags": false,
 		"html.autoClosingTags": true,
 		"files.trimTrailingWhitespace": true,
-		"debug.console.closeOnEnd": true,
 	}
 }
