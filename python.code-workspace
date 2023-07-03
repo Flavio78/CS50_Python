@@ -16,7 +16,6 @@
 		},
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
-		"editor.renderWhitespace": "all",
 		"workbench.editor.enablePreview": false,
 		"workbench.list.openMode": "singleClick",
 		"editor.fontLigatures": true,
@@ -31,6 +30,9 @@
 		"[markdown]": {
 			"editor.fontLigatures": false,
 			"files.trimTrailingWhitespace": false
+		},
+		"[python]": {
+			"editor.renderWhitespace": "all",
 		},
 		"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 		"editor.guides.bracketPairs": true,
