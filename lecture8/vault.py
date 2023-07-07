@@ -1,3 +1,6 @@
+"""Example of overload"""
+
+
 class Vault:
     """Vault class"""
 
@@ -26,11 +29,12 @@ def main():
     print(potter)
     weasley = Vault(25, 50, 100)
     print(weasley)
-    total = sumVaults2(potter, weasley)
+    total = sum_vaults2(potter, weasley)
     print(total)
 
 
-def sumVaults1(potter: Vault, weasley: Vault) -> Vault:
+def sum_vaults1(potter: Vault, weasley: Vault) -> Vault:
+    """Sum of vaults v.1"""
     galleons = potter.galleons + weasley.galleons
     sickles = potter.sickles + weasley.sickles
     knuts = potter.knuts + weasley.knuts
@@ -38,7 +42,8 @@ def sumVaults1(potter: Vault, weasley: Vault) -> Vault:
     return total
 
 
-def sumVaults2(potter, weasley) -> Vault:
+def sum_vaults2(potter: Vault, weasley: Vault) -> Vault:
+    """Sum of vaults v.2"""
     total = potter + weasley
     return total
 
