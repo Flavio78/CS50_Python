@@ -3,9 +3,9 @@ import sys
 
 
 def main():
-    ival = intArray()
-    for v in ival:
-        print(v)
+    # ival = intArray()
+    # for v in ival:
+    #     print(v)
 
     email = input("What's your email? ").strip() if len(sys.argv) != 2 else sys.argv[1]
 
@@ -25,7 +25,8 @@ def validate1(email: str) -> bool:
     regex1 = "^[^@]+@[^@]+\.edu$"
     regex2 = "^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.edu$"
     regex3 = "^\w+@\w+\.(com|edu|gov|net|org)$"
-    return True if re.search(rf"{regex3}", email) else False
+    regex4 = "^(\w|\.)+@(\w+\.)?\w+\.(com|edu|gov|net|org)$"
+    return True if re.search(rf"{regex4}", email, re.IGNORECASE) else False
 
 
 def intArray() -> list[int]:

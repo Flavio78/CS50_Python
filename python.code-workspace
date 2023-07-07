@@ -13,7 +13,7 @@
 				"request": "launch",
 				"program": "${file}",
 				"args": [
-					"David",
+					"David, Malan",
 				],
 				"console": "integratedTerminal"
 			}
