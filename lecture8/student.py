@@ -14,9 +14,9 @@ class Student:
         Patronus is optional
         """
         # I validate the data inside the class, keep all the related code together
-        if not name:  # if user pass an empty string
-            # no return None because it is too late: the object is already been created
-            raise ValueError("Missing name")  # I raise Excetion
+        # if not name:  # if user pass an empty string
+        #     # no return None because it is too late: the object is already been created
+        #     raise ValueError("Missing name")  # I raise Excetion
         # if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
         #     raise ValueError("Invalid house")
         self.name = name
@@ -57,6 +57,16 @@ class Student:
         if house not in ["Gryffindor", "Hufflepuff", "Revenclaw", "Slytherin"]:
             raise ValueError("Invalid house")
         self._house = house  # self.house would be in conflict with the property house
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        if not name:
+            raise ValueError("Missing name")
+        self._name = name
 
 
 def main():
@@ -118,7 +128,10 @@ def function9():
     student = get_student9()
     # Setter for house is called
     # I prevent the data from wrong incorrent input
-    # student.house = ("Number Four, Privet Drive")
+    # student.house = "Number Four, Privet Drive"
+    # Unlucky instance variables are visible
+    # Programme must not change them
+    student._house = "Number Four, Privet Drive"
     print(student)
 
 
