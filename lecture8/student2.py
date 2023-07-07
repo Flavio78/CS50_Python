@@ -25,15 +25,15 @@ class Student:
         """
         return f"{self.name} from {self.house}"
 
-    # Getter: get attribute from a class
-    # _house is my instance variable name
     @property
     def house(self) -> str:
         return self._house
 
-    # Setter: set value for an attribut from a class
     @house.setter
     def house(self, house: str) -> None:
+        """
+        Setter: set value for an attribut from a class
+        """
         if house not in ["Gryffindor", "Hufflepuff", "Revenclaw", "Slytherin"]:
             raise ValueError("Invalid house")
         self._house = house  # self.house would be in conflict with the property house
@@ -51,9 +51,6 @@ class Student:
 
 def main() -> None:
     student = get_student()
-    # Unlucky instance variables are visible
-    # Programme must not change them
-    # student._house = "Number Four, Privet Drive"
     print(student)
 
 
