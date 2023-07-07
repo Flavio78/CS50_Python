@@ -4,11 +4,34 @@ class Student:
     By default class is immutable
     """
 
-    ...
+    def __init__(self, name, house):
+        """
+        implement of the initialization in Python
+        self get access to the object I have already created
+        With self.name I create a new method
+        Something different from creator function from other languages.
+        self.name and self.house are created inside the object
+        """
+        if not name:  # if user pass an empty string
+            # no return None because it is too late: the object is already been created
+            raise ValueError("Missing name")  # I raise Excetion
+        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
+            raise ValueError("Invalid house")
+        self.name = name
+        self.house = house
+
+    def __str__(self):
+        """
+        To customize the print this object as string
+        """
+        return f"{self.name} from {self.house}"
+
+
+# I validate the data inside the class, keep all the related code together
 
 
 def main():
-    function6()
+    function7()
 
 
 def function1():
@@ -48,6 +71,11 @@ def function5():
 def function6():
     student = get_student6()
     print(f"{student.name} from {student.house}")
+
+
+def function7():
+    student = get_student7()
+    print(student)
 
 
 def get_name() -> str:
@@ -102,6 +130,12 @@ def get_student6():
     student.name = input("Name: ")
     student.house = input("House: ")
     return student
+
+
+def get_student7():
+    name = input("Name: ")
+    house = input("House: ")
+    return Student(name, house)
 
 
 if __name__ == "__main__":
