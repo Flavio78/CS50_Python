@@ -1,12 +1,8 @@
-"""
-Cleaner version of student.py
-Typed all functions and variables
-"""
-
-
 class Student:
     """
-    Custom Class with attributes
+    Custom Class with attributes.\n
+    Everything related to a student, is in this class\n
+    Classes are defined on top of the file or mainly on separated file
     """
 
     _house: str
@@ -48,16 +44,21 @@ class Student:
             raise ValueError("Missing name")
         self._name = name
 
+    @classmethod
+    def get(cls):
+        """
+        I could use this method without instanciate a new object of this class.\n
+        Furthermore it would be strange to instanciate an object to get a new object.
+        (chicken/egg problem- circular problem)
+        """
+        name = input("Name: ")
+        house = input("House: ")
+        return cls(name, house)
+
 
 def main() -> None:
-    student = get_student()
+    student = Student.get()
     print(student)
-
-
-def get_student() -> Student:
-    name = input("Name: ")
-    house = input("House: ")
-    return Student(name, house)
 
 
 if __name__ == "__main__":
