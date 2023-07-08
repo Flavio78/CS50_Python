@@ -21,7 +21,7 @@ def sheep2(n: int) -> list[str]:
         flock.append("🐑"*i)
     return flock
 
-def sheep3(n: int) -> list[str]:
+def sheep3(n: int):
     """Using generator for generating a huge amount of data"""
     # with yield a return only 1 value at the time
     for i in range(n):
