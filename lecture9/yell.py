@@ -6,7 +6,7 @@ def yell1(phrase: str) -> None:
     print(phrase.upper())
 
 
-def yell2(words: [str]) -> None:
+def yell2(words: list[str]) -> None:
     uppercased = []
     for word in words:
         uppercased.append(word.upper())
